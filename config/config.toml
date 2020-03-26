@@ -1,0 +1,20 @@
+# HTTP Server配置
+[server]
+	Address        = ":9006"
+	ServerRoot     = "public"
+	ServerAgent    = "gf-demos"
+	LogPath        = "/tmp/log/gf-demos/server"
+	NameToUriType  = 2
+	RouteOverWrite = true
+
+# 全局日志配置
+[logger]
+    Path   = "/tmp/log/gf-demos"
+    Level  = "all"
+    Stdout = true
+
+# 模板引擎配置
+[viewer]
+    Path        = "template"
+    DefaultFile = "index.html"
+    Delimiters  =  ["${", "}"]
