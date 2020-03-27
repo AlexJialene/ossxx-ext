@@ -17,4 +17,3 @@
 [viewer]
     Path        = "template"
     DefaultFile = "index.html"
-    Delimiters  =  ["${", "}"]
