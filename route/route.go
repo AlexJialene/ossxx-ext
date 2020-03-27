@@ -23,6 +23,8 @@ func init() {
 		group.Middleware(interceptor.DefaultInterceptor)
 
 		group.GET("/list", stor.List)
+		group.GET("/detail", stor.Detail)
+		group.GET("/download", stor.DownLoad)
 	})
 
 }
