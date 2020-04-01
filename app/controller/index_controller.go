@@ -78,7 +78,7 @@ func Logout(r *ghttp.Request) {
 }
 
 // Request 9004 start
-const ossReqUrl = "http://127.0.0.1:9004/df/sys/systemUserOss/%s"
+const ossReqUrl = "http://inside.cloudfunx.com:9004/df/sys/systemUserOss/%s"
 const contentType = "application/x-www-form-urlencoded"
 
 func post(userKey string) (biz model.BizResponse, err error) {
