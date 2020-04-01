@@ -12,9 +12,9 @@ func init() {
 	server := g.Server()
 
 	server.Group("/", func(group *ghttp.RouterGroup) {
-		group.Middleware(interceptor.DefaultInterceptor)
-
 		group.ALL("/", controller.Index)
+
+		group.Middleware(interceptor.DefaultInterceptor)
 		group.GET("/auth", controller.Auth)
 		group.GET("/logout", controller.Logout)
 	})

@@ -1,10 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+
+    <!-- Basic -->
+    <meta charset="UTF-8"/>
+    <link href="/css/bootstrap.min.css?v=3.3.5" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="/css/animate.min.css" rel="stylesheet">
+    <link href="/css/style.min.css?v=4.0.0" rel="stylesheet">
+    <title>云次方OSS-登录</title>
 </head>
-<body>
-<h1>hello world</h1>
+<body class="gray-bg">
+<div class="middle-box text-center loginscreen  animated fadeInDown">
+    <div>
+        <div>
+
+            <h1 class="logo-name"></h1>
+
+        </div>
+        <h3>云次方OSS-登录</h3>
+
+        <form class="m-t" role="form" method="get" action="/auth" autocomplete="off">
+            <div class="form-group">
+                <input type="text" name="userKey" class="form-control" id="userKey" required=""
+                       placeholder="请输入userKey"/>
+            </div>
+
+            <button type="submit" class="btn btn-primary block full-width m-b">登 入</button>
+            {{if not .info}}
+            {{else}}
+                <p class="text-muted text-center">
+                    <small><font color="red">{{.info}}</font></small>
+                </p>
+            {{end }}
+        </form>
+    </div>
+</div>
+<script src="/js/jquery-2.1.1.min.js"></script>
 </body>
 </html>
